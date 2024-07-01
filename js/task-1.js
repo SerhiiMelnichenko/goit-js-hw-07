@@ -1,18 +1,15 @@
-// Знаходимо всі елементи li з класом "item" всередині ul з id "categories"
-const categories = document.querySelectorAll('#categories .item')
-
-// Виводимо кількість категорій
-console.log('Кількість категорій:', categories.length)
-
-// Проходимося по кожній категорії
+const categories = document.querySelectorAll(`#categories .item`)
+console.log(`Кількість категорій:`, categories.length)
 categories.forEach(category => {
-    // Знаходимо заголовок категорії (тег h2) і виводимо його текст
-    const title = category.querySelector('h2').textContent
-
-    // Знаходимо всі елементи li всередині поточної категорії та рахуємо їх
-    const itemsCount = category.querySelectorAll('ul li').length
-
-    // Виводимо інформацію про категорію
+    const title = category.querySelector(`h2`).textContent
     console.log(`Категорія: ${title}`)
-    console.log(`Кількість елементів: ${itemsCount}`)
+    const itemsCount = category.querySelectorAll(`ul li`).length
+    console.log(itemsCount)
 })
+
+// Знайти всі елементи li з класом "item" 
+// Вивести кількість категорій на консоль
+// Запустити цикл
+// Знайти заголовок категорії (тег h2) і виводимо його текст
+// Знайти всі елементи li всередині поточної категорії та порахувати їх
+// Вивести  консоль інфор  по категоріям
