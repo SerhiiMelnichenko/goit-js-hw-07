@@ -1,0 +1,8 @@
+.login-form{
+    border-radius: 8px;
+        padding: 24px;
+        width: 408px;
+        height: 256px;
+        display: flex;
+}
+
