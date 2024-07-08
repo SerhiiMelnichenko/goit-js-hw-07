@@ -7,6 +7,7 @@
         background: #f6f6fe;
         display: flex;
         gap: 16px;
+        margin-bottom: 16px;
 }
 
 .boxes{
@@ -23,15 +24,17 @@
 input{
 border: 1px solid #808080;
     border-radius: 8px;
-    padding: 8px 72px;
     width: 150px;
     height: 40px;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.04em;
     color: #2e2f42;
-    appearance: none;
-}
+    box-sizing: border-box;
+    text-align: center;
+    }
+
+
 button[data-create] {
     border-radius: 8px;
         padding: 8px 16px;
