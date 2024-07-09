@@ -27,13 +27,21 @@ const images = [
 
 const gallery = document.querySelector(`.gallery`)
 
-images.forEach(image => {
-  const li = document.createElement(`li`)
-  li.classList.add(`gallery-item`)
-  const img = document.createElement(`img`)
-  img.src = image.url
-  img.alt = image.alt
-  img.classList.add(`gallery-image`)
-  li.appendChild(img)
-  gallery.appendChild(li)
-})
+const imageElements = images
+  .map(
+    (image) => `<li>
+    <img src="${image.url}" alt="${image.alt}">
+  </li>`
+  )
+  .join("")
+
+gallery.insertAdjacentHTML("beforeend", imageElements)
+
+gallery.style.listStyleType = "none"
+gallery.style.display = "flex"
+gallery.style.flexWrap = "wrap"
+gallery.style.gap = "20px"
+
+const galleryItems = gallery.querySelectorAll("li img")
+galleryItems.forEach((item) => (item.style.width = "400px"))
+galleryItems.forEach((item) => (item.style.height = "400px"))
